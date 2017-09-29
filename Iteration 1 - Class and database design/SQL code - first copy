@@ -1,0 +1,35 @@
+create table products (prodID integer,
+                       name varchar(100), 
+                       price integer, 
+                       qty integer, 
+                       taxrate integer, 
+                       primary key (prodID));
+                       
+create table orders (orderID integer,
+                     date varchar(100),
+                     total integer, 
+                     primary key (orderID));
+                     
+create table orderline (orderID integer, 
+                        productID integer, 
+                        qty integer, 
+                        total integer, 
+                        primary key(orderID, productID));
+                     
+insert into products values (101500, 'pumpkin', 1.2, 10, 0.3),
+                            (10900, 'red onion', 4.0, 5, 0.9),
+                            (14500, 'paprika', 5.0, 12, 1.1),
+                            (18763, 'plain bagel', 6.1, 20, 0.2),
+                            (12870, 'eggs', 9, 34, 1.5);
+                            
+insert into orders values (11101, '07/05/2017', 102.43),
+                          (11141, '07/19/2017', 50.12),
+                          (11191, '07/22/2017', 12.94),
+                          (11120, '07/29/2017', 20.30),
+                          (11129, '07/30/2017', 200.12);
+
+Insert into orderline values (2000, 101500, 1, 1.2), 
+                             (2000, 10900, 2, 8.0),
+                             (2000, 14500, 3, 15.0),
+                             (2000, 18763, 2, 12.2),
+                             (2000, 12870, 4, 36.0);
