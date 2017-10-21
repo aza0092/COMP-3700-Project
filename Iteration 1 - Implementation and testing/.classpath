@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path=""/>
+	<classpathentry kind="lib" path="C:/Users/owner/Downloads/Compressed/mysql-connector-java-5.1.44/mysql-connector-java-5.1.44/mysql-connector-java-5.1.44-bin.jar"/>
+	<classpathentry kind="lib" path="C:/Users/owner/Downloads/COMP-3700-Project-master/COMP-3700-Project-master/Store management/src/sqlite-jdbc-3.16.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/owner/Downloads/COMP-3700-Project-master/COMP-3700-Project-master/Store management/src/mysql-connector-java-5.1.44-bin.jar"/>
+	<classpathentry kind="output" path=""/>
+</classpath>
