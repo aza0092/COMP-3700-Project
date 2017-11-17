@@ -4,6 +4,7 @@ public class Product
     private String name;
     private double price;
     private double quantity;
+    private double taxRate;
 
     public double getPrice() 
     {
@@ -43,5 +44,15 @@ public class Product
     public void setQuantity(double quantity) 
     {
         this.quantity = quantity;
+    }
+    
+    public double getTaxRate()
+    {
+        return taxRate;
+    }
+    
+    public void setTaxRate(double taxRate)
+    {
+        this.taxRate = taxRate; 
     }
 }

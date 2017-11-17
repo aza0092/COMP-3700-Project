@@ -26,7 +26,7 @@ public class ProductController implements ActionListener
             saveProduct();
     }
 
-    private void saveProduct() 
+    private void saveProduct() //need to make sure that new information is being saved and not just pretend saved.
     {
         int productID;
         try {
@@ -61,6 +61,15 @@ public class ProductController implements ActionListener
             JOptionPane.showMessageDialog(null, "Invalid product name! Please provide a non-empty product name!");
             return;
         }
+        
+        double productTaxRate;
+        try {
+            productTaxRate = Double.parseDouble(productView.getTxtProductTaxRate().getText());
+        }
+        catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "Invalid product price! Please provide a valid product price!");
+            return;
+        }
 
 
         Product product = new Product();
@@ -68,6 +77,7 @@ public class ProductController implements ActionListener
         product.setName(productName);
         product.setPrice(productPrice);
         product.setQuantity(productQuantity);
+        product.setTaxRate(productTaxRate);
 
         // Store the product to the database
 
@@ -96,6 +106,7 @@ public class ProductController implements ActionListener
         productView.getTxtProductName().setText(product.getName());
         productView.getTxtProductPrice().setText(String.valueOf(product.getPrice()));
         productView.getTxtProductQuantity().setText(String.valueOf(product.getQuantity()));
+        productView.getTxtProductTaxRate().setText(String.valueOf(product.getTaxRate()));
     }
 
 

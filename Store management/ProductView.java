@@ -6,6 +6,7 @@ public class ProductView extends JFrame
     private JTextField txtProductName  = new JTextField(30);
     private JTextField txtProductPrice  = new JTextField(10);
     private JTextField txtProductQuantity  = new JTextField(10);
+    private JTextField txtProductTaxRate  = new JTextField(10);
 
     private JButton btnLoad = new JButton("Load Product");
     private JButton btnSave = new JButton("Save Product");
@@ -14,7 +15,7 @@ public class ProductView extends JFrame
     {
         this.setTitle("Product View");
         this.setLayout(new BoxLayout(this.getContentPane(), BoxLayout.PAGE_AXIS));
-        this.setSize(500, 200);
+        this.setSize(500, 300);
 
         JPanel panelButton = new JPanel();
         panelButton.add(btnLoad);
@@ -40,6 +41,10 @@ public class ProductView extends JFrame
         panelProductInfo.add(new JLabel("Quantity: "));
         panelProductInfo.add(txtProductQuantity);
         txtProductQuantity.setHorizontalAlignment(JTextField.RIGHT);
+        
+        panelProductInfo.add(new JLabel("Tax Rate: "));
+        panelProductInfo.add(txtProductTaxRate);
+        txtProductTaxRate.setHorizontalAlignment(JTextField.RIGHT);
 
         this.getContentPane().add(panelProductInfo);
     }
@@ -72,5 +77,10 @@ public class ProductView extends JFrame
     public JTextField getTxtProductQuantity() 
     {
         return txtProductQuantity;
+    }
+    
+    public JTextField getTxtProductTaxRate() 
+    {
+        return txtProductTaxRate;
     }
 }
