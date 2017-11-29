@@ -1,0 +1,3 @@
+- initial users can be found in the application class
+- if there is an error in database, please delete the "storenew" file. once the program is started, it will automatically create the file again
+- password for a new user created is in the storenew file. it can be changed anytime.
